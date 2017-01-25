@@ -60,6 +60,8 @@ matrix:
     - make install
     - cd ../../
     - export PATH=$PATH:install-ghdl-llvm/bin/
+    - sudo pip3 install vunit
+    - sudo pip3 install vunit-hdl
 
 # install:
 # - pip install tox
