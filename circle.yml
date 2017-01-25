@@ -1,6 +1,6 @@
 dependencies:
   pre:
-    - ./scripts/ghdlsetup.sh
+    - sudo sh ./scripts/ghdlsetup.sh
     - pip3 install vunit_hdl
 
 test:
