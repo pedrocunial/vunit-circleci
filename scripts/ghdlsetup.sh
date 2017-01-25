@@ -60,13 +60,13 @@ rm $GHDL_TARBALL
 echo -e "Testing GCC version and configuration..."
 gcc -v
 
-# test ghdl version
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
-echo -e "Testing GHDL version..."
-./bin/ghdl -v
-if [ $? -eq 0 ]; then
-	echo -e "GHDL test [SUCCESSFUL]"
-else
-	echo 1>&2 -e "GHDL test [FAILED]"
-	exit 1
-fi
+# # test ghdl version
+# export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
+# echo -e "Testing GHDL version..."
+# ./bin/ghdl -v
+# if [ $? -eq 0 ]; then
+# 	echo -e "GHDL test [SUCCESSFUL]"
+# else
+# 	echo 1>&2 -e "GHDL test [FAILED]"
+# 	exit 1
+# fi
