@@ -1,0 +1,8 @@
+dependencies:
+  pre:
+    - sudo apt-get install ghdl
+    - pip3 install vunit_hdl
+
+test:
+  override:
+    - python3 run.py
