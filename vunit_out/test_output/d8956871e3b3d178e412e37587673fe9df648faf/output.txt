@@ -1,3 +1,0 @@
-/home/gil/Documents/Insper/2017.1/elesis/user_guide/tb_example_many.vhd:26:9:@0ms:(assertion error): It fails
-/home/gil/Documents/Insper/2017.1/elesis/user_guide/vunit_out/test_output/d8956871e3b3d178e412e37587673fe9df648faf/ghdl/tb_example_many-tb:error: assertion failed
-/home/gil/Documents/Insper/2017.1/elesis/user_guide/vunit_out/test_output/d8956871e3b3d178e412e37587673fe9df648faf/ghdl/tb_example_many-tb:error: simulation failed

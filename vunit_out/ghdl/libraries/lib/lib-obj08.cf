@@ -1,7 +1,0 @@
-v 4
-file / "/home/gil/Documents/Insper/2017.1/elesis/user_guide/tb_example.vhd" "821ba097b93b96a79083485cf78100411648ab9a" "20170125190306.579":
-  entity tb_example at 7( 277) + 0 on 13;
-  architecture tb of tb_example at 14( 397) + 0 on 14;
-file / "/home/gil/Documents/Insper/2017.1/elesis/user_guide/tb_example_many.vhd" "75b8f06405c73aaab557c2112a51468dbbbda5e5" "20170125190306.524":
-  entity tb_example_many at 7( 277) + 0 on 11;
-  architecture tb of tb_example_many at 14( 402) + 0 on 12;

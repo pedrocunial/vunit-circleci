@@ -1,2 +1,0 @@
-/home/gil/Documents/Insper/2017.1/elesis/user_guide/tb_example.vhd:19:5:@0ms:(report note): Hello world!
-simulation stopped @0ms with status 0
