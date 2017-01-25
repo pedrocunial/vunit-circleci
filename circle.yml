@@ -10,7 +10,7 @@ dependencies:
   pre:
     - sudo apt-get install libstdc++5
     - sudo sh ./scripts/ghdlsetup.sh
-    - git clone --recursive https://github.com/VUnit/vunit.git && cd vunit && python3 vunit/setup.py install 
+    - git clone --recursive https://github.com/VUnit/vunit.git && cd vunit && python3 setup.py install 
 
 test:
   override:
