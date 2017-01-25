@@ -1,6 +1,6 @@
 dependencies:
   pre:
-    - sudo apt-get install ghdl
+    - ./tools/Circle-CI/ghdlsetup.sh
     - pip3 install vunit_hdl
 
 test:
