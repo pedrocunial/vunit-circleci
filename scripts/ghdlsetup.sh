@@ -28,20 +28,6 @@ GITHUB_URL="$GITHUB_SERVER/$GITHUB_SLUG/releases/download/$GITHUB_TAGNAME/$GITHU
 # --------------------------------------
 GITROOT=$(pwd)
 GHDL_TARBALL="ghdl.tgz"
-
-# define color escape codes
-RED='\e[0;31m'			# Red
-GREEN='\e[1;32m'		# Green
-YELLOW='\e[1;33m'		# Yellow
-MAGENTA='\e[1;35m'	# Magenta
-CYAN='\e[1;36m'			# Cyan
-NOCOLOR='\e[0m'			# No Color
-
-
-echo -e "${MAGENTA}========================================${NOCOLOR}"
-echo -e "${MAGENTA}     Downloading and installing GHDL    ${NOCOLOR}"
-echo -e "${MAGENTA}========================================${NOCOLOR}"
-echo -e "${CYAN}mkdir -p $CIRCLE_DIR${NOCOLOR}"
 mkdir -p $CIRCLE_DIR
 cd $CIRCLE_DIR
 
@@ -49,20 +35,20 @@ cd $CIRCLE_DIR
 echo -e "${CYAN}Downloading $GHDL_TARBALL from $GITHUB_URL...${NOCOLOR}"
 wget -q $GITHUB_URL -O $GHDL_TARBALL
 if [ $? -eq 0 ]; then
-	echo -e "${GREEN}Download [SUCCESSFUL]${NOCOLOR}"
+	echo -e "Download [SUCCESSFUL]"
 else
-	echo 1>&2 -e "${RED}Download of $GITHUB_RELEASE_FILE [FAILED]${NOCOLOR}"
+	echo 1>&2 -e "Download of $GITHUB_RELEASE_FILE [FAILED]"
 	exit 1
 fi
 
 # unpack GHDL
 if [ -e $GHDL_TARBALL ]; then
-	echo -e "${CYAN}Unpacking $GHDL_TARBALL... ${NOCOLOR}"
+	echo -e "Unpacking $GHDL_TARBALL... "
 	tar -xzf $GHDL_TARBALL
 	if [ $? -eq 0 ]; then
-		echo -e "${GREEN}Unpack [SUCCESSFUL]${NOCOLOR}"
+		echo -e "Unpack [SUCCESSFUL]"
 	else
-		echo 1>&2 -e "${RED}Unpack [FAILED]${NOCOLOR}"
+		echo 1>&2 -e "Unpack [FAILED]"
 		exit 1
 	fi
 fi
@@ -71,14 +57,15 @@ fi
 rm $GHDL_TARBALL
 
 # gcc debugging
-echo -e "${CYAN}Testing GCC version and configuration...${NOCOLOR}"
+echo -e "Testing GCC version and configuration..."
 gcc -v
 
 # test ghdl version
-echo -e "${CYAN}Testing GHDL version...${NOCOLOR}"
+echo -e "Testing GHDL version..."
 ./bin/ghdl -v
 if [ $? -eq 0 ]; then
-	echo -e "${GREEN}GHDL test [SUCCESSFUL]${NOCOLOR}"
+	echo -e "GHDL test [SUCCESSFUL]"
 else
-	echo 1>&2 -e "${RED}GHDL test [FAILED]${NOCOLOR}"
+	echo 1>&2 -e "GHDL test [FAILED]"
 	exit 1
+fi
