@@ -10,6 +10,7 @@ dependencies:
   pre:
     - sudo apt-get install libstdc++5
     - sudo sh ./scripts/ghdlsetup.sh
+    - sudo apt-get install python3-pip
     - sudo pip3 install vunit
     - sudo pip3 install vunit_hdl
 
