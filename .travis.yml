@@ -28,3 +28,7 @@ matrix:
 
 script:
 - python run.py
+
+notifications:
+  email: false
+  slack: elementosdesistemas:ofJV6uLFlgvMBAR0YDOgeGwl
