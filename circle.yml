@@ -9,9 +9,30 @@ machine:
 dependencies:
   pre:
     - sudo apt-get install libstdc++5
-    - sudo sh ./scripts/ghdlsetup.sh
+    # - sudo sh ./scripts/ghdlsetup.sh
+    # ghdl
+    - git clone --depth 1 https://github.com/tgingold/ghdl.git ghdl
+    - cd ghdl
+    - mkdir build-mcode
+    - cd build-mcode
+    - ../configure --prefix=../../install-ghdl-mcode/
+    - make
+    - make install
+    - cd ../../
+    - export PATH=$PATH:install-ghdl-mcode/bin/
+
+    # vunit
     - git clone --recursive https://github.com/VUnit/vunit.git && cd vunit && python3 setup.py install 
 
 test:
   override:
+    - git clone --depth 1 https://github.com/tgingold/ghdl.git ghdl
+    - cd ghdl
+    - mkdir build-llvm
+    - cd build-llvm
+    - ../configure --prefix=../../install-ghdl-llvm/ --with-llvm-config=llvm-config-3.5
+    - make
+    - make install
+    - cd ../../
+    - export PATH=$PATH:install-ghdl-llvm/bin/
     - python3 run.py
