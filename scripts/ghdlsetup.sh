@@ -61,6 +61,7 @@ echo -e "Testing GCC version and configuration..."
 gcc -v
 
 # test ghdl version
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 echo -e "Testing GHDL version..."
 ./bin/ghdl -v
 if [ $? -eq 0 ]; then
