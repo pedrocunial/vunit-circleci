@@ -1,8 +1,16 @@
+machine:
+  pre:
+    - wget https://s3.amazonaws.com/circle-downloads/circle-pyenv-python-3.5.1_1.0_amd64.deb
+    - sudo dpkg -i circle-pyenv-python-3.5.1_1.0_amd64.deb
+
+  python:
+    version: 3.5.1
+
 dependencies:
   pre:
     - sudo apt-get install libstdc++5
     - sudo sh ./scripts/ghdlsetup.sh
-    - pip3 install vunit_hdl
+    - sudo pip install vunit_hdl
 
 test:
   override:
