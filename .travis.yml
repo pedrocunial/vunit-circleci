@@ -61,7 +61,9 @@ matrix:
     - cd ../../
     - export PATH=$PATH:install-ghdl-llvm/bin/
     - git clone --recursive https://github.com/VUnit/vunit.git
+    - cd vunit
     - python setup.py install
+    - cd ..
 
 script:
 - python run.py
