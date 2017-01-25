@@ -60,6 +60,7 @@ matrix:
     - make install
     - cd ../../
     - export PATH=$PATH:install-ghdl-llvm/bin/
+    - sudo apt-get install python3-pip
     - sudo pip3 install vunit
     - sudo pip3 install vunit-hdl
 
