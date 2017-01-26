@@ -9,9 +9,6 @@ entity nand_vhdl is
 end nand_vhdl; 
  
 architecture main of nand_vhdl is
-signal tmp1, tmp2 : std_logic;
 begin
-   tmp1 <= a nand b;
-   q <= not tmp1;
---	q    <= not tmp2;
+   q <= a nand b;
 end main; 
