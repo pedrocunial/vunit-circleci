@@ -17,8 +17,8 @@ matrix:
     - mkdir build-llvm
     - cd build-llvm
     - ../configure --prefix=../../install-ghdl-llvm/ --with-llvm-config=llvm-config-3.5
-    - make
-    - make install
+    - make -j3
+    - make install -j3
     - cd ../../
     - export PATH=$PATH:install-ghdl-llvm/bin/
     - git clone --recursive https://github.com/VUnit/vunit.git
@@ -27,7 +27,7 @@ matrix:
     - cd ..
 
 script:
-- python run.py -p8
+- python run.py -p3
 
 notifications:
   email: false
