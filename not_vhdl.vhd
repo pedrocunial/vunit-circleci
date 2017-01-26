@@ -9,5 +9,5 @@ end not_vhdl;
  
 architecture main of not_vhdl is
 begin
-   q <= not q;
+   q <= not a;
 end main; 
