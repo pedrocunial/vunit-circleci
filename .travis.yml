@@ -27,7 +27,7 @@ matrix:
     - cd ..
 
 script:
-- python run.py
+- python run.py -p8
 
 notifications:
   email: false
