@@ -12,6 +12,6 @@ architecture main of nand_vhdl is
 signal tmp1, tmp2 : std_logic;
 begin
    tmp1 <= a nand b;
-   tmp2 <= not tmp1;
-	q    <= not tmp2;
+   q <= not tmp1;
+--	q    <= not tmp2;
 end main; 
