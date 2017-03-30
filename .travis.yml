@@ -37,8 +37,9 @@ install:
 script:
 - python run.py -p3
 - python assembler.py
+- python emulate.py
 - green -vv emulator/TesteEmulator.py
 
 notifications:
   email: false
-  slack: elementosdesistemas:ofJV6uLFlgvMBAR0YDOgeGwl#github_privado
+  slack: elementosdesistemas:ofJV6uLFlgvMBAR0YDOgeGwl#github
