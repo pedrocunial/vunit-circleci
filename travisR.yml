@@ -1,7 +1,6 @@
 language: python
 matrix:
   include:
-    # Python 3.5 with ghdl llvm
     - env: BUILD_NAME=py35-acceptance-ghdl
   python: '3.5'
   os: linux
@@ -27,9 +26,9 @@ matrix:
     - cd ..
 
 addons:
- apt:
-  packages:
-    - oracle-java8-installer
+  apt:
+    packages:
+      - oracle-java8-installer
 
 install:
     - pip install green
@@ -41,4 +40,4 @@ script:
 
 notifications:
   email: false
-  slack: elementosdesistemas:ofJV6uLFlgvMBAR0YDOgeGwl#github_privado
+  slack: elementosdesistemas:ofJV6uLFlgvMBAR0YDOgeGwl#github
