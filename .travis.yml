@@ -26,9 +26,12 @@ matrix:
     - python setup.py install
     - cd ..
 
+install:
+    - pip install green
+
 script:
-- python run.py -p3
-- python emulator/TesteEmulator.py -v
+    - python run.py -p3
+    - green -vv emulator/TesteEmulator.py
 
 notifications:
   email: false

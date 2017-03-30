@@ -3,23 +3,24 @@
 
 import sys, getopt
 import unittest
- 
-class Teste(unittest.TestCase):
 
-	resultado = ''
-	teste = ''
+class TesteAssembly(unittest.TestCase):
+
+	path = "assembly/"
 	debug = False
 
 	def setUp(self):
-		self.resultado = "assembly/ram_out.mif"
-		self.teste = "assembly/testeAbs1.txt"
-		self.debug = False 
+		pass
 
-	def test_codigo(self):
-		main(self.resultado, self.teste, self.debug)
+	def test_Abs(self):
+		main(self.path+"ram_out.mif", self.path+"testeAbs1.txt", self.debug)
 
-def teste():
-	unittest.main()
+	def test_Div(self):
+		main(self.path+"ram_out.mif", self.path+"testeAbs1.txt", self.debug)
+
+	def test_Factorial(self):
+		main(self.path+"ram_out.mif", self.path+"testeAbs1.txt", self.debug)
+
 
 def parametros(argv):
 	resultado = ''
@@ -43,6 +44,8 @@ def parametros(argv):
 	return resultado, teste, debug
 
 def main(resultado, teste, debug):
+
+	#System.out.print("AAA")
 
 	ram = {}
 	validacao = {}
@@ -78,6 +81,9 @@ def main(resultado, teste, debug):
 		for e,v in validacao.items():
 			assert (v==ram[e]),"Erro RAM[{0}]={1:016b}, valor esperado ({2:016b})".format(e,ram[e],v)	
 
+
 if __name__ == '__main__':
     #main(parametros(sys.argv))
-    teste()
+	suite = unittest.TestLoader().loadTestsFromTestCase(TesteAssembly)
+	unittest.TextTestRunner(verbosity=3).run(suite)
+	
