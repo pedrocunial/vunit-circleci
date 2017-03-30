@@ -14,3 +14,4 @@ lib = ui.add_library("lib")
 lib.add_source_files(join(root, "*.vhd"))
 lib.add_source_files(join(root, "PortasLogicas", "*.vhd"))
 ui.main()
+

@@ -28,6 +28,7 @@ matrix:
 
 script:
 - python run.py -p3
+- python emulator/TesteEmulator -v
 
 notifications:
   email: false
