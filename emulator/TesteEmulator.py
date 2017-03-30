@@ -13,13 +13,13 @@ class TesteAssembly(unittest.TestCase):
 		pass
 
 	def test_Abs(self):
-		main(self.path+"ram_out.mif", self.path+"testeAbs1.txt", self.debug)
+		teste(self.path+"ram_out.mif", self.path+"testeAbs1.txt", self.debug)
 
 	def test_Div(self):
-		main(self.path+"ram_out.mif", self.path+"testeAbs1.txt", self.debug)
+		teste(self.path+"ram_out.mif", self.path+"testeAbs1.txt", self.debug)
 
 	def test_Factorial(self):
-		main(self.path+"ram_out.mif", self.path+"testeAbs1.txt", self.debug)
+		teste(self.path+"ram_out.mif", self.path+"testeAbs1.txt", self.debug)
 
 
 def parametros(argv):
@@ -43,9 +43,7 @@ def parametros(argv):
 			teste = arg
 	return resultado, teste, debug
 
-def main(resultado, teste, debug):
-
-	#System.out.print("AAA")
+def teste(resultado, teste, debug):
 
 	ram = {}
 	validacao = {}
@@ -81,9 +79,8 @@ def main(resultado, teste, debug):
 		for e,v in validacao.items():
 			assert (v==ram[e]),"Erro RAM[{0}]={1:016b}, valor esperado ({2:016b})".format(e,ram[e],v)	
 
-
 if __name__ == '__main__':
-    #main(parametros(sys.argv))
+    #teste(parametros(sys.argv))
 	suite = unittest.TestLoader().loadTestsFromTestCase(TesteAssembly)
 	unittest.TextTestRunner(verbosity=3).run(suite)
 	
