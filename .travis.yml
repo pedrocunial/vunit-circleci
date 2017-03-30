@@ -35,6 +35,7 @@ install:
 
 script:
     - python run.py -p3
+    - python assembler.py
     - green -vv emulator/TesteEmulator.py
 
 notifications:
