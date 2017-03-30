@@ -11,8 +11,8 @@ class Teste(unittest.TestCase):
 	debug = False
 
 	def setUp(self):
-		self.resultado = "ram_out.mif"
-		self.teste = "testeAbs1.txt"
+		self.resultado = "assembly/ram_out.mif"
+		self.teste = "assembly/testeAbs1.txt"
 		self.debug = False 
 
 	def test_codigo(self):
