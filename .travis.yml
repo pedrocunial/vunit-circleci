@@ -26,11 +26,6 @@ matrix:
     - python setup.py install
     - cd ..
 
-addons:
- apt:
-  packages:
-    - oracle-java8-installer
-
 install:
     - pip install green
 
