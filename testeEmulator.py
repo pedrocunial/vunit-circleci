@@ -4,22 +4,21 @@
 import sys, getopt
 import unittest
 
+import loadTestes
+
 class TesteAssembly(unittest.TestCase):
 
-	path = "machine_code/"
 	debug = False
 
 	def setUp(self):
 		pass
 
-	def test_Abs(self):
-		teste(self.path+"ram_out2.mif", "assembly/"+"testeAbs1.txt", self.debug)
+	def test_Assembly(self):
 
-	def test_Div(self):
-		teste(self.path+"ram_out2.mif", "assembly/"+"testeAbs1.txt", self.debug)
-
-	def test_Factorial(self):
-		teste(self.path+"ram_out2.mif", "assembly/"+"testeAbs1.txt", self.debug)
+		nomes_testes = loadTestes.testes("testes.txt")
+		
+		for i in nomes_testes:
+			teste("machine_code/{0}_out.mif".format(i), "test/{0}_tst.mif".format(i), self.debug)
 
 
 def parametros(argv):
