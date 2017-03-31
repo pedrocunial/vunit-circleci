@@ -35,8 +35,10 @@ install:
     - pip install green
 
 script:
-- python testesSW/assembler.py
-- python -m pytest -v testesSW/teste.py 
+- python run.py -p3
+- python assembler.py
+- python emulate.py
+- python -m pytest -v teste.py 
 
 notifications:
   email: false
