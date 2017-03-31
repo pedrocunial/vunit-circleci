@@ -38,7 +38,7 @@ script:
 - python run.py -p3
 - python assembler.py
 - python emulate.py
-- green -vv testeEmulator.py
+- python -m pytest -v teste.py 
 
 notifications:
   email: false

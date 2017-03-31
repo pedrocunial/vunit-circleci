@@ -20,7 +20,6 @@ class TesteAssembly(unittest.TestCase):
 		for i in nomes_testes:
 			teste("machine_code/{0}_out.mif".format(i), "test/{0}_tst.mif".format(i), self.debug)
 
-
 def parametros(argv):
 	resultado = ''
 	teste = ''
