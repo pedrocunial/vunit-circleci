@@ -6,20 +6,20 @@ import unittest
 
 class TesteAssembly(unittest.TestCase):
 
-	path = "assembly/"
+	path = "machine_code/"
 	debug = False
 
 	def setUp(self):
 		pass
 
 	def test_Abs(self):
-		teste(self.path+"ram_out2.mif", self.path+"testeAbs1.txt", self.debug)
+		teste(self.path+"ram_out2.mif", "assembly/"+"testeAbs1.txt", self.debug)
 
 	def test_Div(self):
-		teste(self.path+"ram_out2.mif", self.path+"testeAbs1.txt", self.debug)
+		teste(self.path+"ram_out2.mif", "assembly/"+"testeAbs1.txt", self.debug)
 
 	def test_Factorial(self):
-		teste(self.path+"ram_out2.mif", self.path+"testeAbs1.txt", self.debug)
+		teste(self.path+"ram_out2.mif", "assembly/"+"testeAbs1.txt", self.debug)
 
 
 def parametros(argv):
